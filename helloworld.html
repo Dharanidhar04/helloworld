@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Page</title>
+    <style>
+        /* Global reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Full-screen background */
+        body {
+            height: 100vh;
+            background: linear-gradient(45deg, #3e4c59, #2c3e50);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Styling for content container */
+        .content {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transform: scale(0);
+            animation: fadeInUp 1s ease-out forwards, scaleUp 1.5s ease-out forwards;
+        }
+
+        /* Heading styling */
+        h1 {
+            font-size: 4rem;
+            letter-spacing: 2px;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        /* Paragraph styling */
+        p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 2s ease-out forwards;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleUp {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Hello, World!</h1>
+        <p>This is my first webpage with some cool styling and animations!</p>
+    </div>
+
+</body>
+</html>
